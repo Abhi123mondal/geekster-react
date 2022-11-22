@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/geekster-react/static/css/main.849e130f.css",
+    "main.js": "/geekster-react/static/js/main.30246cee.js",
+    "static/js/787.0392c759.chunk.js": "/geekster-react/static/js/787.0392c759.chunk.js",
+    "index.html": "/geekster-react/index.html",
+    "main.849e130f.css.map": "/geekster-react/static/css/main.849e130f.css.map",
+    "main.30246cee.js.map": "/geekster-react/static/js/main.30246cee.js.map",
+    "787.0392c759.chunk.js.map": "/geekster-react/static/js/787.0392c759.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.849e130f.css",
+    "static/js/main.30246cee.js"
+  ]
+}
