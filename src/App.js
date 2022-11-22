@@ -1,7 +1,7 @@
 
    import './App.css';
    import data from './data';
-   import jam from './new';
+
 
 function App() {
 
