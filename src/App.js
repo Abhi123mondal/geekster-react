@@ -1,11 +1,11 @@
-
+import {React,useState} from 'react';
    import './App.css';
-   import data from './data';
-
+   import data from './data.json';
+   
 
 function App() {
 
-console.log(data);
+  var[i, setValue] = useState(0);
 
   return (
     
@@ -43,26 +43,29 @@ console.log(data);
             </h2>
             <h2 class="h2" style={{color:"rgb(150, 145, 145)"}}>Hear it from the once who have been on this journey already</h2>
         <div class="row">
-            <div class="column left" style={{backgroundColor:"#16252d"}}>
-                <img src="https://images.geekster.in/new-testimonial/Saurabh-Garg.webp"  class="first"/>
-                <img src="https://images.geekster.in/new-testimonial/Kaushal-Sorathiya.webp"  class="third"/>
-                <img src="https://images.geekster.in/new-testimonial/Sai-Pranav-Tunuguntla.webp"  class="fourth"/>
-                <img src="https://images.geekster.in/new-testimonial/Gajendra-Malviya.webp"  class="sixth"/>
-                <img src="https://images.geekster.in/new-testimonial/Karri-Devi.webp"  class="ninth"/>
+             
+            
+
+               <div class="column left" style={{backgroundColor:"#16252d"}}>
+                <img onClick={() =>setValue(i=0)} src="https://images.geekster.in/new-testimonial/Saurabh-Garg.webp"  class="first"/>
+                <img onClick={()=>setValue(i=1)} src="https://images.geekster.in/new-testimonial/Kaushal-Sorathiya.webp"  class="third"/>
+                <img onClick={() =>setValue(i=2)} src="https://images.geekster.in/new-testimonial/Sai-Pranav-Tunuguntla.webp"  class="fourth"/>
+                <img onClick={() =>setValue(i=3)} src="https://images.geekster.in/new-testimonial/Gajendra-Malviya.webp"  class="sixth"/>
+                <img onClick={()=>setValue(i=4)} src="https://images.geekster.in/new-testimonial/Karri-Devi.webp"  class="ninth"/>
               </div>
-             {data.map((e,i)=>{
-              return(
+          
                 <div class="column middle" style={{backgroundColor:"#16252d"}}>
                 <div class="container">
                     <div class="row1">
                       <div class="column1" style={{backgroundColor: "#fff"}}>
-                          <img src={e.image}  class="garg"/><br/>
-                          <h3 style={{textAlign:"center ;"}}>Saurabh Garg</h3><br/>
-                          <img src={e.company} class="avizva"/>
+                          <img  src= {data[i].image} class="image"/><br/>
+                          <h3 style={{textAlign:"center;", margin:"10px;"}}>{data[i].name}</h3>
+                          <br/>
+                          <img   src={data[i].company }class="company"/>
                       </div>
                       <div class="column2" style={{backgroundColor: "#fff"}}>
                          
-                      <p style={{marginTop:"30px"}}> {e.description}                                                      
+                      <p style={{marginTop:"20px"}}>{data[i].description}                                                    
                      </p>
                       <p style={{color:"#737c81"}}>Read more...</p>
                       </div>
@@ -71,25 +74,19 @@ console.log(data);
 
 
       </div>
-              )
-             })}
+              
+         
               
               <div class="column right" style={{backgroundColor:"#16252d"}}>
-        <img src="https://images.geekster.in/new-testimonial/Naveen-Katiyar.webp" class="second"/>
-         <img src="https://images.geekster.in/new-testimonial/Nipun-Sinha.webp"  class="fifth"/>   
-      <img src="https://images.geekster.in/new-testimonial/Utkarsh-singh.webp"  class="seventh"/>
-      <img src="https://images.geekster.in/new-testimonial/Prakhar-Agarwal.webp"  class="eighth"/>
-       <img src="https://images.geekster.in/new-testimonial/Pawan-Kumar.webp"  class="tenth"/>
+        <img onClick={() =>setValue(i=5)} src="https://images.geekster.in/new-testimonial/Naveen-Katiyar.webp" class="second"/>
+         <img onClick={() =>setValue(i=6)} src="https://images.geekster.in/new-testimonial/Nipun-Sinha.webp"  class="fifth"/>   
+      <img onClick={() =>setValue(i=7)} src="https://images.geekster.in/new-testimonial/Utkarsh-singh.webp"  class="seventh"/>
+      <img onClick={() =>setValue(i=8)} src="https://images.geekster.in/new-testimonial/Prakhar-Agarwal.webp"  class="eighth"/>
+       <img onClick={() =>setValue(i=9)} src="https://images.geekster.in/new-testimonial/Pawan-Kumar.webp"  class="tenth"/>
               </div>
-        
-        
-            
         </div>
     </div>
-
-   
     </div>
-
   );
 }
 
